@@ -224,7 +224,7 @@
 
         注：请求API数据需要经过AES加密传输，详情请看test用例
 
-    6. 如需增加其他币种，友情技术支持：falcom520@hotmail.com  Telegram: https://t.me/ukbababa (@ukbababa)
+    6. 如需增加其他币种，友情技术支持：  Telegram: https://t.me/ukbababa (@ukbababa)
 ```
 #### 应用场景
     ```
@@ -235,7 +235,7 @@
 
 ### 求合作或赞赏
 ```
-技术支持：falcom520@hotmail.com  Telegram: https://t.me/ukbababa (@ukbababa)
+技术支持： Telegram: https://t.me/ukbababa (@ukbababa)
 
 USDT-TRC20/ TRX : TSgPwnsdoFN2zEQw5Fh9iLJnb3Cnxk84gZ
 ```

@@ -228,7 +228,7 @@
         Note: post request data is transmitted using AES encryption, please refer to the test case for details.
 
     6. New types are constantly being updated. 
-        Technical Support：falcom520@hotmail.com  Telegram: https://t.me/ukbababa (@ukbababa)
+         Telegram: https://t.me/ukbababa (@ukbababa)
 ```
 #### Scope of application
     ```
@@ -238,7 +238,7 @@
 
 ### Donate && cooperation
 ```
-Technical Support：falcom520@hotmail.com  Telegram: https://t.me/ukbababa (@ukbababa)
+Technical Support：  Telegram: https://t.me/ukbababa (@ukbababa)
 
 USDT-TRC20/ TRX : TSgPwnsdoFN2zEQw5Fh9iLJnb3Cnxk84gZ
 ```
