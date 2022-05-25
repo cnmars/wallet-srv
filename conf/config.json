@@ -1,0 +1,6 @@
+{
+    "dot": {
+        "rpc_host": "wss://rpc.polkadot.io",
+        "meta_file": "../conf/dot.meta"
+    }
+}

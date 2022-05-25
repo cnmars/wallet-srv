@@ -1,0 +1,21 @@
+package offchain
+
+import (
+	"os"
+	"testing"
+
+	"wallet-srv/lib/pkg/dot/client"
+
+	"wallet-srv/lib/pkg/dot/config"
+)
+
+var offchain *Offchain
+
+func TestMain(m *testing.M) {
+	cl, err := client.Connect(config.Default().RPCURL)
+	if err != nil {
+		panic(err)
+	}
+	offchain = NewOffchain(cl)
+	os.Exit(m.Run())
+}
