@@ -30,6 +30,7 @@ var (
 		"dot":  wallet.GetDotAddress,
 		"bsv":  wallet.GetBsvAddress,
 		"avax": wallet.GetAvaxAddress,
+		"flow": wallet.GetFlowAddress,
 	}
 )
 
@@ -49,7 +50,7 @@ func main() {
 
 	num := cmdFlag.Int("num", 10, "generate address numbers.")
 	loop := cmdFlag.Bool("loop", false, "loop create address")
-	coin := cmdFlag.String("coin", "", "-coin=btc|bch|bsv|dash|doge|ltc|qtum|eth|trx|sol|fil|ada|xrp|luna|near|dot|avax")
+	coin := cmdFlag.String("coin", "", "-coin=btc|bch|bsv|dash|doge|ltc|qtum|eth|trx|sol|fil|ada|xrp|luna|near|dot|avax|flow")
 	cmdFlag.Parse(os.Args[1:])
 	cmdFlag.Usage = usage
 

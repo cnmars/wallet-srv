@@ -30,6 +30,7 @@ const (
 	BSV        = ZeroQuote + 236
 	AVAX       = ZeroQuote + 9000
 	FTM        = ZeroQuote + 1007
+	FLOW       = ZeroQuote + 539
 )
 
 // eth chain id https://chainlist.org/zh

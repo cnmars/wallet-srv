@@ -225,3 +225,15 @@ CREATE TABLE IF NOT EXISTS `ftm_address` (
     PRIMARY KEY (`id`),
     UNIQUE KEY `address` (`address`)
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 DEFAULT CHARSET = utf8;
+
+CREATE TABLE IF NOT EXISTS `flow_address` (
+    `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+    `address` varchar(300) NOT NULL COMMENT '地址',
+    `priv_key` text NOT NULL,
+    `is_used` tinyint(4) DEFAULT 0,
+    `multi` tinyint(4) DEFAULT 1,
+    `create_time` timestamp(6) NOT NULL DEFAULT current_timestamp(6),
+    `update_time` timestamp(6) NOT NULL DEFAULT current_timestamp(6) ON UPDATE current_timestamp(6),
+    PRIMARY KEY (`id`),
+    UNIQUE KEY `address` (`address`)
+) ENGINE = InnoDB AUTO_INCREMENT = 1 DEFAULT CHARSET = utf8;

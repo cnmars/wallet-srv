@@ -105,6 +105,8 @@ func (hd *HDWallet) NewWalletByPath(symbol string, coinType uint32, path string,
 		w, err = NewDotWallet(hd.seed)
 	case "AVAX":
 		w, err = NewAvaxWallet(hd.seed)
+	case "FLOW":
+		w, err = NewFlowWallet(hd.seed)
 	default:
 		err = fmt.Errorf("invalid symbol: %s", symbol)
 	}

@@ -266,3 +266,20 @@ func GetAvaxAddress() (string, string, error) {
 
 	return hex.EncodeToString(hdw.seed), w.DeriveAddress(), nil
 }
+
+//Flow
+func GetFlowAddress() (string, string, error) {
+
+	hdw, _ := NewHDWallet(SymbolFlow, FLOW)
+	w, err := hdw.NewWallet(0, 0, 0)
+	if err != nil {
+		return "", "", err
+	}
+
+	addr := w.DeriveAddress()
+	if addr == "" {
+		return "", "", fmt.Errorf("address create failed.")
+	}
+
+	return hex.EncodeToString(hdw.seed), w.DeriveAddress(), nil
+}

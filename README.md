@@ -24,6 +24,7 @@
     NEAR
     DOT
     AVAX
+    FLOW
 ```
 
 #### Safety
@@ -225,6 +226,38 @@
             "tran_ver": 14,
         }
         `
+        11) /avax/sign POST JSON
+        `
+        {
+            "vin":[
+				   {"txid":"xxxxxxx", "vout":0, "amount": 11, "address": "xxxx", "asset_id": "xxxxx"},
+				   {"txid":"xxxxxxx", "vout":1, "amount": 111, "address": "xxxx", "asset_id": "xxxxx"},
+				   {"txid":"xxxxxxx", "vout":2, "amount": 11, "address": "xxxx", "asset_id": "xxxxx"},
+			   ],
+		   	"vout":[
+				   {"address": "1xxx99a9axxx", "amount": 1212, "asset_id": "xxxxx"},
+				   {"address": "1xxx99a9axxx", "amount": 11, "asset_id": "xxxxx"},
+				   {"address": "1xxx99a9axxx", "amount": 11, "asset_id": "xxxxx"},
+			   ],
+			"block_chainid": "xxxxxxxxxxxxx",//
+			"chain_id": 1,
+			"memo": ""
+        }
+        `
+        12) /flow/sign POST JSON
+        `
+        {
+            "from": "",
+			"to": "",
+			"player": "",
+			"amount": "102.99911",
+			"last_blockhash": "" //last block hash
+			"token": "1654653399040a61",
+			"seq_num": 121
+        }
+        `
+
+
         Note: post request data is transmitted using AES encryption, please refer to the test case for details.
 
     6. New types are constantly being updated. 

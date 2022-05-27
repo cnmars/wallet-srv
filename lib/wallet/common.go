@@ -36,6 +36,7 @@ const (
 	SymbolDot  = "DOT"
 	SymbolBSV  = "BSV"
 	SymbolAvax = "AVAX"
+	SymbolFlow = "FLOW"
 
 	BtcChainMainNet  = int(wire.MainNet)
 	BtcChainTestNet3 = int(wire.TestNet3)
@@ -192,6 +193,7 @@ func GetDBModel(symbol string) (model.IfAddress, string) {
 		"dot":  &model.DotAddress{},
 		"bsv":  &model.BsvAddress{},
 		"avax": &model.AvaxAddress{},
+		"flow": &model.FlowAddress{},
 	}
 
 	return AddrModelMap[symbol], symbol + "_address"

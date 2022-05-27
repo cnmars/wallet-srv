@@ -37,7 +37,6 @@ require (
 	github.com/go-playground/universal-translator v0.18.0 // indirect
 	github.com/go-playground/validator/v10 v10.10.1 // indirect
 	github.com/go-sql-driver/mysql v1.6.0 // indirect
-	github.com/google/go-cmp v0.5.7 // indirect
 	github.com/ipfs/go-ipfs-util v0.0.2 // indirect
 	github.com/ipfs/go-ipld-format v0.4.0 // indirect
 	github.com/jinzhu/inflection v1.0.0 // indirect
@@ -66,33 +65,41 @@ require (
 	golang.org/x/text v0.3.7 // indirect
 	google.golang.org/protobuf v1.28.0 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
-	lukechampine.com/blake3 v1.1.6 // indirect
+	lukechampine.com/blake3 v1.1.7 // indirect
 )
 
 require (
 	github.com/ava-labs/avalanchego v1.7.10
 	github.com/bits-and-blooms/bitset v1.2.2
-	github.com/centrifuge/go-substrate-rpc-client/v4 v4.0.0
 	github.com/cosmos/cosmos-sdk v0.45.4
 	github.com/deckarep/golang-set v1.8.0
-	github.com/decred/dcrd/dcrec/secp256k1/v3 v3.0.0
 	github.com/ebfe/keccak v0.0.0-20150115210727-5cc570678d1b
-	github.com/fxamacker/cbor/v2 v2.4.0
+	github.com/fxamacker/cbor/v2 v2.4.1-0.20220314011055-12f5cb4b5eb0
 	github.com/juju/testing v0.0.0-20220203020004-a0ff61f03494
+	github.com/onflow/flow-go-sdk v0.25.0
 	github.com/pierrec/xxHash v0.1.5
 	github.com/rs/cors v1.8.2
-	github.com/vedhavyas/go-subkey v1.0.3
 	github.com/ybbus/jsonrpc v1.1.1
 	gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c
 	gopkg.in/natefinch/npipe.v2 v2.0.0-20160621034901-c1b8fa8bdcce
 )
 
 require (
+	github.com/decred/dcrd/dcrec/secp256k1/v3 v3.0.0 // indirect
+	github.com/fxamacker/circlehash v0.3.0 // indirect
+	github.com/go-test/deep v1.0.5 // indirect
 	github.com/golang/mock v1.6.0 // indirect
 	github.com/gorilla/rpc v1.2.0 // indirect
 	github.com/holiman/bloomfilter/v2 v2.0.3 // indirect
 	github.com/linxGnu/grocksdb v1.6.34 // indirect
+	github.com/logrusorgru/aurora v0.0.0-20200102142835-e9ef32dff381 // indirect
 	github.com/nbutton23/zxcvbn-go v0.0.0-20180912185939-ae427f1e4c1d // indirect
+	github.com/onflow/atree v0.3.0 // indirect
+	github.com/onflow/cadence v0.23.4 // indirect
+	github.com/onflow/flow-go/crypto v0.24.3 // indirect
+	github.com/opentracing/opentracing-go v1.2.0 // indirect
+	github.com/rivo/uniseg v0.2.0 // indirect
+	github.com/zeebo/blake3 v0.2.2 // indirect
 	gonum.org/v1/gonum v0.9.1 // indirect
 )
 
@@ -189,9 +196,9 @@ require (
 	github.com/x448/float16 v0.8.4 // indirect
 	github.com/zondax/hid v0.9.0 // indirect
 	go.etcd.io/bbolt v1.3.6 // indirect
-	golang.org/x/net v0.0.0-20211208012354-db4efeb81f4b // indirect
-	golang.org/x/term v0.0.0-20210220032956-6a3ed077a48d // indirect
-	google.golang.org/genproto v0.0.0-20211223182754-3ac035c7e7cb // indirect
+	golang.org/x/net v0.0.0-20220127200216-cd36cc0744dd // indirect
+	golang.org/x/term v0.0.0-20210927222741-03fcf44c2211 // indirect
+	google.golang.org/genproto v0.0.0-20220222213610-43724f9ea8cf // indirect
 	google.golang.org/grpc v1.45.0 // indirect
 	gopkg.in/ini.v1 v1.66.2 // indirect
 	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b // indirect

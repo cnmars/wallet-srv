@@ -135,6 +135,16 @@ type AvaxTx struct {
 	Memo         string          `json:"memo"`
 }
 
+type FlowTx struct {
+	From          string `json:"from"`
+	To            string `json:"to"`
+	Player        string `json:"player"`
+	Amount        string `json:"amount"`
+	Token         string `json:"token"`
+	LastBlockHash string `json:"last_blockhash"`
+	FromSeqNum    uint64 `json:"seq_num"`
+}
+
 type ReqAddress struct {
 	Coin  string `json:"coin"`
 	Limit uint32 `json:"limit"`

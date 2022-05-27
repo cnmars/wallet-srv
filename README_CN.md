@@ -1,9 +1,8 @@
 
 ## 离线钱包和离线验签
 
-#### 支持币种
+#### 已接入主链
 ```
-
     BTC
     BCH
     BSV
@@ -24,14 +23,15 @@
     LUNA
     NEAR
     DOT
-    AVAX
+    AVAX （X-Chain）
+    FLOW
 
 ```
 
 #### 安全可靠
      1. 多重安全防护，降低人为因数引起的资金安全
      2. 避免因脱库、触网、物理备份导致安全事故
-     3. 生成地址、离线验签、多重加密、私钥存储全部分离，可分配多方操作
+     3. 生成地址、离线验签、多重加密、私钥存储全部分离，私钥多重加密可分配多方操作
 
 
 #### 部署
@@ -219,6 +219,36 @@
             "nonce": 0,
             "spec_ver": 9190,
             "tran_ver": 14,
+        }
+        `
+        11) /avax/sign POST JSON
+        `
+        {
+            "vin":[
+				   {"txid":"xxxxxxx", "vout":0, "amount": 11, "address": "xxxx", "asset_id": "xxxxx"},
+				   {"txid":"xxxxxxx", "vout":1, "amount": 111, "address": "xxxx", "asset_id": "xxxxx"},
+				   {"txid":"xxxxxxx", "vout":2, "amount": 11, "address": "xxxx", "asset_id": "xxxxx"},
+			   ],
+		   	"vout":[
+				   {"address": "1xxx99a9axxx", "amount": 1212, "asset_id": "xxxxx"},
+				   {"address": "1xxx99a9axxx", "amount": 11, "asset_id": "xxxxx"},
+				   {"address": "1xxx99a9axxx", "amount": 11, "asset_id": "xxxxx"},
+			   ],
+			"block_chainid": "xxxxxxxxxxxxx",//
+			"chain_id": 1,
+			"memo": ""
+        }
+        `
+        12) /flow/sign POST JSON
+        `
+        {
+            "from": "",
+			"to": "",
+			"player": "",
+			"amount": "102.99911",
+			"last_blockhash": "" //last block hash
+			"token": "1654653399040a61",
+			"seq_num": 121
         }
         `
 

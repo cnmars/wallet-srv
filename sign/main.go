@@ -49,6 +49,7 @@ func main() {
 		v1.POST("/near/sign", action.NearSignAction) // NEAR
 		v1.POST("/dot/sign", action.DotSignAction)   // DOT
 		v1.POST("/avax/sign", action.AvaxSignAction) // AVAX
+		v1.POST("/flow/sign", action.FlowSignAction) // FLOW
 	}
 
 	v2 := router.Group("get")
