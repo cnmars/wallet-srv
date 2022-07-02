@@ -106,19 +106,19 @@ func NewKey(seed []byte) (result *Key) {
 	return
 }
 
-func keccak256(data ...[]byte) *[32]byte {
+func keccak256(data ...[]byte) *[KeyLength]byte {
 	h := sha3.NewLegacyKeccak256()
 	for _, v := range data {
 		h.Write(v)
 	}
 	sum := h.Sum(nil)
-	sum32 := (*[32]byte)(unsafe.Pointer(&sum[0]))
+	sum32 := (*[KeyLength]byte)(unsafe.Pointer(&sum[0]))
 
 	return sum32
 }
 
-func publicKeyFromPrivateKey(priv *[32]byte) *[32]byte {
-	pub := new([32]byte)
+func publicKeyFromPrivateKey(priv *[KeyLength]byte) *[KeyLength]byte {
+	pub := new([KeyLength]byte)
 
 	p := new(ExtendedGroupElement)
 	GeScalarMultBase(p, (*Key)(priv))

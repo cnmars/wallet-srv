@@ -17,7 +17,7 @@ type txInGen struct {
 	height uint64
 }
 
-type txInToKey struct {
+type TxInToKey struct {
 	amount     uint64
 	keyOffsets []uint64
 	keyImage   Key
@@ -78,7 +78,7 @@ func (t *txInGen) MixinLen() int {
 	return 0
 }
 
-func (t *txInToKey) TxInSerialize() (result []byte) {
+func (t *TxInToKey) TxInSerialize() (result []byte) {
 	result = append([]byte{txInToKeyMarker}, Uint64ToBytes(t.amount)...)
 	result = append(result, Uint64ToBytes(uint64(len(t.keyOffsets)))...)
 	for _, keyOffset := range t.keyOffsets {
@@ -88,8 +88,14 @@ func (t *txInToKey) TxInSerialize() (result []byte) {
 	return
 }
 
-func (t *txInToKey) MixinLen() int {
+func (t *TxInToKey) MixinLen() int {
 	return len(t.keyOffsets)
+}
+
+func (t *TransactionPrefix) AddTxIn(txIn []*TxInToKey) {
+	for _, in := range txIn {
+		t.vin = append(t.vin, in)
+	}
 }
 
 func (t *TransactionPrefix) SerializePrefix() (result []byte) {
@@ -169,14 +175,14 @@ func (t *Transaction) ExpandTransaction(outputKeys [][]CtKey) {
 		r.mlsagSigs = make([]MlsagSig, 1)
 		r.mlsagSigs[0].ii = make([]Key, len(t.vin))
 		for i, txIn := range t.vin {
-			txInWithKey, _ := txIn.(*txInToKey)
+			txInWithKey, _ := txIn.(*TxInToKey)
 			r.mlsagSigs[0].ii[i] = txInWithKey.keyImage
 		}
 	} else if r.sigType == RCTTypeSimple {
 		r.mixRing = outputKeys
 		r.mlsagSigs = make([]MlsagSig, len(t.vin))
 		for i, txIn := range t.vin {
-			txInWithKey, _ := txIn.(*txInToKey)
+			txInWithKey, _ := txIn.(*TxInToKey)
 			r.mlsagSigs[i].ii = make([]Key, 1)
 			r.mlsagSigs[i].ii[0] = txInWithKey.keyImage
 		}
@@ -209,8 +215,8 @@ func ParseTxInGen(buf io.Reader) (txIn *txInGen, err error) {
 	return
 }
 
-func ParseTxInToKey(buf io.Reader) (txIn *txInToKey, err error) {
-	t := new(txInToKey)
+func ParseTxInToKey(buf io.Reader) (txIn *TxInToKey, err error) {
+	t := new(TxInToKey)
 	t.amount, err = ReadVarInt(buf)
 	if err != nil {
 		return

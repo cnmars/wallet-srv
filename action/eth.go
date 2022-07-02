@@ -31,7 +31,7 @@ func EthSignAction(c *gin.Context) {
 			   "gaslimit": 60000,
 			   "gasprice": 2121231, //单位为Wei
 			   "contract": "", 		//为空则为ETH转账，否则为对应代币转账
-			   "chainid": 1, 		//1为ETH链，56为BSC链，61为ETC链，128为HECO链，137为Matic链, 250 FTM
+			   "chainid": 1, 		//1为ETH链，56为BSC链，61为ETC链，128为HECO链，137为Matic链, 250 FTM 10 Optimism 592 Astar
 		   }
 		   **/
 	var reqData ctypes.EthTx

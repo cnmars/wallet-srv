@@ -25,6 +25,8 @@
     DOT
     AVAX （X-Chain）
     FLOW
+    FTM
+    OP
 
 ```
 

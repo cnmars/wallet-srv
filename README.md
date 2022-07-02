@@ -25,6 +25,8 @@
     DOT
     AVAX
     FLOW
+    FTM
+    OP
 ```
 
 #### Safety

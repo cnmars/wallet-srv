@@ -17,6 +17,14 @@ func (a *Address) Base58() (result string) {
 	return
 }
 
+func (a *Address) GetSpendingKey() []byte {
+	return a.spendingKey
+}
+
+func (a *Address) GetViewingKey() []byte {
+	return a.viewingKey
+}
+
 func NewAddress(address string) (result *Address, err string) {
 	raw := DecodeMoneroBase58(address)
 	if len(raw) != 69 {

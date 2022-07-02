@@ -7,18 +7,19 @@ import (
 
 type XmrWallet struct {
 	symbol     string
-	privateKey []byte
-	publicKey  []byte
+	seed       []byte
+	privateKey *monero.Key
+	publicKey  *monero.Key
 }
 
 func NewXmrWallet(seed []byte) (*XmrWallet, error) {
 
 	key := monero.NewKey(seed)
-
 	return &XmrWallet{
 		symbol:     SymbolXmr,
-		privateKey: seed,
-		publicKey:  key.PubKey()[:]}, nil
+		seed:       seed,
+		privateKey: key,
+		publicKey:  key.PubKey()}, nil
 }
 
 func (w *XmrWallet) ChainId() int {
@@ -30,17 +31,16 @@ func (w *XmrWallet) Symbol() string {
 }
 
 func (w *XmrWallet) DeriveAddress() string {
-	key := monero.NewKey(w.privateKey)
+	key := monero.NewKey(w.seed)
 	return key.Address()
 }
 
 func (w *XmrWallet) DerivePublicKey() string {
-	return hex.EncodeToString(w.publicKey)
+	return hex.EncodeToString(w.publicKey.Serialize())
 }
 
 func (w *XmrWallet) DerivePrivateKey() string {
-	key := monero.NewKey(w.privateKey)
-	return hex.EncodeToString(key[:])
+	return hex.EncodeToString(w.privateKey.Serialize())
 }
 
 func (w *XmrWallet) DeriveNativePrivateKey() string {
