@@ -120,6 +120,8 @@
             "contract": "",
             "chainid": 1
         }
+
+        chainid: 1 ETH，56 BSC，61 ETC，128 HECO，137 Matic, 66 OKX，250 FTM 10 Optimism 592 Astar
         `
         3) /trx/sign POST
         `
