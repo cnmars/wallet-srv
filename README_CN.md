@@ -13,6 +13,7 @@
     ETH (ETH & ERC20 Token)
     BSC (BSC & BEP20 Token)
     HT (HT & HRC20 Token)
+    OKX (OKB & ORC20 Token)
     Matic [Matic & ERC20 Token]
     TRX (TRX & TRC20 Token)
     SOL (SOL & SPL Token)

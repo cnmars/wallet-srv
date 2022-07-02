@@ -20,7 +20,7 @@ import (
 	"github.com/golang/glog"
 )
 
-//支持ETH链/BSC链/HECO链/Matic链/ETC链验签
+//支持ETH链/BSC链/HECO链/Matic链/OKX链/ETC链验签
 func EthSignAction(c *gin.Context) {
 	/*
 		   {
@@ -31,7 +31,7 @@ func EthSignAction(c *gin.Context) {
 			   "gaslimit": 60000,
 			   "gasprice": 2121231, //单位为Wei
 			   "contract": "", 		//为空则为ETH转账，否则为对应代币转账
-			   "chainid": 1, 		//1为ETH链，56为BSC链，61为ETC链，128为HECO链，137为Matic链, 250 FTM 10 Optimism 592 Astar
+			   "chainid": 1, 		//1为ETH链，56为BSC链，61为ETC链，128为HECO链，137为Matic链, 66为OK链，250 FTM 10 Optimism 592 Astar
 		   }
 		   **/
 	var reqData ctypes.EthTx
