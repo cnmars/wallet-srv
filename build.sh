@@ -17,4 +17,4 @@ do
     chmod +x bin/$appname
 done
 
-echo "build finish."
+echo "build success."

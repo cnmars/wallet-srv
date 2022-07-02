@@ -279,4 +279,5 @@
 Technical Support：  Telegram: https://t.me/ukbababa (@ukbababa)
 
 USDT-TRC20/ TRX : TSgPwnsdoFN2zEQw5Fh9iLJnb3Cnxk84gZ
+USDT-ERC20/BSC/MATIC/HECO/OKX : 0xA6cAa332420B2d11D7396E95813FE3dc2f5D573B
 ```
